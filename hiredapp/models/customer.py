@@ -20,6 +20,7 @@ class Customer(models.Model):
     address = models.CharField(max_length=200)
     phone_number = models.CharField(max_length=55)
     zipcode = models.CharField(max_length=10)
+    city = models.CharField(max_length=55)
 
     def __str__(self):
         return f'{self.user.first_name} {self.user.last_name}'

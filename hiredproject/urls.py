@@ -24,6 +24,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'jobs', Jobs, 'jobs')
+router.register(r'customers', Customers, 'customer')
+router.register(r'messages', Messages, 'messages')
+router.register(r'users', Users, 'user')
+router.register(r'job_types', JobTypes, 'job_types')
+router.register(r'employee_profiles', EmployeeProfiles, 'employee_profiles')
+
 
 urlpatterns = [
     path('', include(router.urls)),
