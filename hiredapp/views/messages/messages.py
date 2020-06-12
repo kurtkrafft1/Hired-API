@@ -14,6 +14,7 @@ from hiredapp.views.customers.customer import CustomerSerializer
 import json 
 
 class MessagesSerializer(serializers.HyperlinkedModelSerializer):
+    #nest customer so we can get enough data on both people in the message
     customer = CustomerSerializer('customer')
     receiver_customer = CustomerSerializer('receiver_customer')
     class Meta:
@@ -27,13 +28,16 @@ class MessagesSerializer(serializers.HyperlinkedModelSerializer):
 class Messages(ViewSet):
 
     def list(self, request):
+        #Hold on it gets a little crazy here
+        #This first query param tells the api to get messages (associated with user) and only grab 1 message between the user and someone 
+        #else no matter whether the user is the sender or receiver
         get_names = self.request.query_params.get('get_names', None)
+        #this will be used to fetch all the messages associated with one job
         by_job = self.request.query_params.get('by_job', None)
         if get_names is not None:
             customer = Customer.objects.get(user=request.auth.user)
             cId = int(customer.id)
-            print("ID", cId)
-            print("TYPE", type(cId))
+            #this is another necessary raw sqlite query 
             messages = Message.objects.raw('''
                 SELECT
                     m.id,

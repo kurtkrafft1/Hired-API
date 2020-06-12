@@ -59,20 +59,22 @@ class Jobs(ViewSet):
 
     def list(self, request):
 
-        # customer = None
-        # if hasattr(request.auth, "user"):
-        #     customer = Customer.objects.get(user=request.auth.user)
         jobs = Job.objects.all()
-        # if customer is not None :
-        #     jobs = jobs.filter(customer = customer)
+        #filter by user_id if provided the correct query
         user_query = self.request.query_params.get("user_id", None)
         if user_query is not None:
+            #grab the user/associate it with customer/ associate it with that jobs so we can show all the jobs for a user
             user = User.objects.get(pk=user_query)
             customer = Customer.objects.get(user = user)
             jobs = jobs.filter(customer=customer)
         
+        #Here we check if we are trying to get jobs by the user
         Twoser_query = self.request.query_params.get('by_user', None)
         if Twoser_query is not None:
+            #we have to use a raw sqlite query because the customer id is nested within employeeprofile and inside that is the user id 
+            # We will have access to the user_id through session storage
+            #to make more secure we could use token authentication however my stages were incorrect when I set this page up so it wasn't working
+            #will update in future if time allows
             jobs = Job.objects.raw('''
             Select 
                 j.id, 
@@ -108,7 +110,10 @@ class Jobs(ViewSet):
         return Response(serializer.data)
 
     def update(self, request, pk=None):
- 
+        #this will mostly be interacting when the user is messaging someone
+        #once the user hits 'hire' it will add the start date 
+        #after that the employee will hit finish job and that will add an end_date
+        #the review will ideally appear on the home screen of the customer when it is equal to ""
         add_start = self.request.query_params.get('start', None)
         add_end = self.request.query_params.get('end', None)
         add_review = self.request.query_params.get('review', None)
@@ -129,7 +134,6 @@ class Jobs(ViewSet):
     def retrieve(self, request, pk=None):
         try :
             job = Job.objects.get(pk=pk)
-            # print("JOB", job)
             serializer = JobSerializer(job, many=False, context={'request':request})
             return Response(serializer.data)
         except Exception:

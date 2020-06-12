@@ -13,6 +13,7 @@ from django.utils import timezone
 import json 
 
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
+    # nest a serializer for user so we don't get all the information on the user just the stuff we need - first name and last name 
     user = UserSerializer('user')
     class Meta:
         model = Customer
@@ -20,7 +21,7 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
             view_name='customer',
             lookup_field = "id"
         )
-        fields = ('id', 'address', 'phone_number', 'zipcode','user_id', 'user')
+        fields = ('id', 'address', 'phone_number','city', 'zipcode','user_id', 'user')
         depth = 1
     
 class Customers(ViewSet):

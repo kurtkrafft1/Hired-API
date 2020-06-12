@@ -14,6 +14,7 @@ from hiredapp.views.customers.customer import CustomerSerializer
 import json 
 
 
+
 class EmployeeProfileSerializer(serializers.HyperlinkedModelSerializer):
 
     customer = CustomerSerializer('customer')
@@ -32,15 +33,44 @@ class EmployeeProfiles(ViewSet):
 
         eps = EmployeeProfile.objects.all()
 
+        #Check to see if the duery has a filter by user_id attached to it
         user_query = self.request.query_params.get('user_id', None)
+        search = self.request.query_params.get('search', None)
         if user_query is not None:
+            #if so we grab the user and the find the customer based of that 
             user = User.objects.get(pk=user_query)
             customer = Customer.objects.get(user_id=user)
+            #then we filter the profiles based off of that customer
             eps = eps.filter(customer = customer)
+
         serializer = EmployeeProfileSerializer(eps, many=True, context = {'request': request})
-        return Response(serializer.data)
+        # Now we check if there is a search requested
+        if search is not None:
+            # check if city is in requested field 
+            city = self.request.query_params.get('city', None)
+            #check if job type is in requested field
+            job_type_id = self.request.query_params.get('job_type_id', None)
+            # check if title is in requested field 
+            title = self.request.query_params.get('title', None)
+            # create a new list to filter all the data through
+            new_list = list()
+            if city is not None:
+                #filter based off othe customers location (the one whose profile it belongs to)
+                new_list = list(filter(lambda d: city  in d['customer']['city'].lower(), serializer.data))
+            if job_type_id is not None:
+                new_list = list(filter(lambda d: int(job_type_id) == int(d['job_type_id']), new_list))
+            if title is not None:
+                new_list = list(filter(lambda d: title in d['title'].lower(), new_list))
+            #Now we return the a response of the filtered data from the serializer
+            return Response(new_list)
+        else:
+            return Response(serializer.data)
     
     def retrieve(self, request, pk=None):
+        '''
+            A function made to retreive once specific profile 
+            in te fetch url you need to have a viable PK
+        '''
 
         try: 
             ep = EmployeeProfile.objects.get(pk=pk)
@@ -51,7 +81,10 @@ class EmployeeProfiles(ViewSet):
             return HttpResponseServerError(ex)
     
     def create(self,request):
-
+        '''
+            A post function that creates a new profile based off of the data given from the user. Note we do not user employeeprofile.objects.create()
+            that saves the data prematurely 
+        '''
         ep = EmployeeProfile()
         ep.job_type_id = request.data['job_type_id']
         ep.title = request.data["title"]
