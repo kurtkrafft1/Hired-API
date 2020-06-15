@@ -90,6 +90,12 @@ class Jobs(ViewSet):
                 where u.id = %s;
             ''', [Twoser_query])
         
+        employee_profile = self.request.query_params.get('employee_profile', None)
+        if employee_profile is not None:
+            print(employee_profile)
+            ep = EmployeeProfile.objects.get(pk=employee_profile)
+            jobs = jobs.filter(employee_profile = ep)
+        
 
         serializer = JobSerializer(jobs, many=True, context={"request": request})
 
