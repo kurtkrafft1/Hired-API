@@ -101,7 +101,8 @@ class EmployeeProfiles(ViewSet):
         ep.job_type_id = request.data['job_type_id']
         ep.title = request.data["title"]
         ep.description = request.data['description']
-        ep.customer_id = request.data['customer_id']
+        customer = Customer.objects.get(user=request.auth.user)
+        ep.customer = customer
         ep.save()
         serializer = EmployeeProfileSerializer(ep, many=False, context={'request': request})
 
