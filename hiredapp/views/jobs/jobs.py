@@ -122,6 +122,7 @@ class Jobs(ViewSet):
         #the review will ideally appear on the home screen of the customer when it is equal to ""
         add_start = self.request.query_params.get('start', None)
         add_end = self.request.query_params.get('end', None)
+        rehire =  self.request.query_params.get('rehire', None)
         add_review = self.request.query_params.get('review', None)
         # https://stackoverflow.com/a/37607525/798303
         # This resolved an issue with naive datetimes
@@ -131,6 +132,9 @@ class Jobs(ViewSet):
             job.start_date = date
         if add_end is not None:
             job.end_date = date
+        if rehire is not None:
+            job.start_date = date
+            job.end_date = None
         if add_review is not None:
             job.review = request.data['review']
 
