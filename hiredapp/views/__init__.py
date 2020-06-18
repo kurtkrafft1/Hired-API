@@ -3,3 +3,4 @@ from .jobs import Jobs
 from .job_types import JobTypes
 from .employee_profiles import EmployeeProfiles
 from .messages import Messages
+from .ratings import Ratings

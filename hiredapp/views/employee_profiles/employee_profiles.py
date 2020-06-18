@@ -14,6 +14,8 @@ from hiredapp.views.customers.customer import CustomerSerializer
 import json 
 import sqlite3 
 from hiredapp.views.connection import Connection
+import math
+
 
 
 class EmployeeProfileSerializer(serializers.HyperlinkedModelSerializer):
@@ -52,7 +54,7 @@ class EmployeeProfiles(ViewSet):
                 data = db_cursor.fetchone()
                 if data.total is not None:
                     avg = data.total/data.number
-                    prof.ratings = avg
+                    prof.ratings = custom_round(avg)
                 
             # print(data)
             # avg = ratings['total']/ ratings['number']÷
@@ -107,7 +109,7 @@ class EmployeeProfiles(ViewSet):
                     data = db_cursor.fetchone()
                     if data.total is not None:
                         avg = data.total/data.number
-                        prof.ratings = avg
+                        prof.ratings = custom_round(avg)
 
             return Response(new_list)
         else:
@@ -139,7 +141,7 @@ class EmployeeProfiles(ViewSet):
                 data = db_cursor.fetchone()
                 if data.total is not None:
                     avg = data.total/data.number
-                    ep.ratings = avg
+                    ep.ratings = custom_round(avg)
 
             serializer = EmployeeProfileSerializer(ep, many=False, context={'request': request})
             return Response(serializer.data)
@@ -199,3 +201,17 @@ def create_ratings(cursor, row):
     rating.employee_profile_id = row["employee_profile_id"]
 
     return rating
+
+def custom_round(num):
+    # y =math.modf(num)[1]
+    
+    if math.modf(num)[0]>.67:
+        return( math.ceil(num))
+    elif math.modf(num)[0]< .34:
+        
+        return (math.floor(num))
+    else:
+        return (math.floor(num) + .5)
+
+
+
