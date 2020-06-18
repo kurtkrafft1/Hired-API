@@ -103,14 +103,29 @@ class Jobs(ViewSet):
     
     def create(self, request):
         # Grab the user using the token
-        customer = Customer.objects.get(user=request.auth.user)
-        new_job = Job()
-        new_job.start_date = None
-        new_job.end_date = None
-        ep = EmployeeProfile.objects.get(pk=request.data['employee_profile_id'])
-        new_job.employee_profile = ep
-        new_job.customer = customer 
-        new_job.save()
+        rehire =  self.request.query_params.get('rehire', None)
+        if rehire is not None:
+            customer = Customer.objects.get(user=request.auth.user)
+            new_job = Job()
+            new_job.start_date = request.data['start_date']
+            new_job.end_date = request.data['end_date']
+            ep = EmployeeProfile.objects.get(pk=request.data['employee_profile_id'])
+            new_job.review = request.data["review"]
+            new_job.employee_profile = ep
+            new_job.customer = customer 
+            new_job.save()
+            
+
+        else:
+
+            customer = Customer.objects.get(user=request.auth.user)
+            new_job = Job()
+            new_job.start_date = None
+            new_job.end_date = None
+            ep = EmployeeProfile.objects.get(pk=request.data['employee_profile_id'])
+            new_job.employee_profile = ep
+            new_job.customer = customer 
+            new_job.save()
 
         serializer = JobSerializer(new_job, context= {'request': request})
         return Response(serializer.data)
@@ -135,6 +150,7 @@ class Jobs(ViewSet):
         if rehire is not None:
             job.start_date = date
             job.end_date = None
+            job.review = ""
         if add_review is not None:
             job.review = request.data['review']
 
