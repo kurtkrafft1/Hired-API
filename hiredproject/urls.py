@@ -28,6 +28,7 @@ router.register(r'jobs', Jobs, 'jobs')
 router.register(r'customers', Customers, 'customer')
 router.register(r'messages', Messages, 'messages')
 router.register(r'users', Users, 'user')
+router.register(r'ratings', Ratings, 'ratings')
 router.register(r'job_types', JobTypes, 'job_types')
 router.register(r'employee_profiles', EmployeeProfiles, 'employee_profiles')
 
