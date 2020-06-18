@@ -20,6 +20,7 @@ class RatingsSerializer(serializers.HyperlinkedModelSerializer):
             lookup_field = "id"
         )
         fields = ("id", "customer", "employee_profile", "number")
+        depth=1
 
 
 class Ratings(ViewSet):
@@ -33,3 +34,16 @@ class Ratings(ViewSet):
         rating.save()
         serializer = RatingsSerializer(rating, many=False, context={"request": request})
         return Response(serializer.data)
+
+    def list(self, request):
+
+        ratings = Rating.objects.all()
+        customer_id = self.request.query_params.get('customer_id', None)
+        customer = Customer.objects.get(user=request.auth.user)
+        ratings = ratings.filter(customer=customer)
+        employee_profile_id = self.request.query_params.get('employee_profile_id', None)
+        if employee_profile_id is not None:
+            ratings = ratings.filter(employee_profile_id = employee_profile_id)
+        
+        serializer = RatingsSerializer(ratings, many=True, context={"request": request})
+        return Response(serializer.data)    

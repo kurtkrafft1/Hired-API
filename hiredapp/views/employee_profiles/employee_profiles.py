@@ -205,13 +205,13 @@ def create_ratings(cursor, row):
 def custom_round(num):
     # y =math.modf(num)[1]
     
-    if math.modf(num)[0]>.67:
+    if math.modf(num)[0]>.5:
         return( math.ceil(num))
-    elif math.modf(num)[0]< .34:
+    elif math.modf(num)[0]< .5:
         
         return (math.floor(num))
     else:
-        return (math.floor(num) + .5)
+        return (math.ceil(num))
 
 
 
