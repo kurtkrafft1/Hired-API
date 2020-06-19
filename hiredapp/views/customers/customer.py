@@ -54,7 +54,7 @@ class Customers(ViewSet):
         customer = Customer.objects.get(pk=pk)
         customer.address = request.data['address']
         customer.phone_number = request.data['phone_number']
-        customer.zipcode = request.data['zipcode']
+        customer.city = request.data['city']
         customer.save()
 
         serializer = CustomerSerializer(customer,context = {'request': request})

@@ -44,8 +44,6 @@ class Users(ViewSet):
         """
         user = User.objects.get(pk=pk)
         user.username = request.data["email"]
-        user.first_name = request.data["first_name"]
-        user.last_name = request.data["last_name"]
         user.email = request.data["email"]
         user.save()
 
