@@ -10,6 +10,7 @@ class EmployeeProfile(models.Model):
     customer_id
     title
     description
+    pay
 
     '''
 
@@ -17,5 +18,6 @@ class EmployeeProfile(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=55)
     description = models.CharField(max_length=300)
+    pay = models.CharField(max_length=20, default='$7.25/hr')
     ratings = 0
 
