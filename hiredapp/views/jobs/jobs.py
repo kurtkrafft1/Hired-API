@@ -125,6 +125,7 @@ class Jobs(ViewSet):
             ep = EmployeeProfile.objects.get(pk=request.data['employee_profile_id'])
             new_job.employee_profile = ep
             new_job.customer = customer 
+            new_job.review = ""
             new_job.save()
 
         serializer = JobSerializer(new_job, context= {'request': request})
