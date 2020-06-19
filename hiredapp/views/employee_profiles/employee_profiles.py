@@ -27,7 +27,7 @@ class EmployeeProfileSerializer(serializers.HyperlinkedModelSerializer):
             view_name="employee_profiles",
             lookup_field = "id"
         )
-        fields = ('id', 'customer', 'title', 'description', 'job_type_id', 'ratings')
+        fields = ('id', 'customer', 'title', 'description', 'job_type_id', 'ratings', 'pay')
         depth =2
 
 
@@ -159,6 +159,7 @@ class EmployeeProfiles(ViewSet):
         ep.description = request.data['description']
         customer = Customer.objects.get(user=request.auth.user)
         ep.customer = customer
+        ep.pay = request.data["pay"]
         ep.save()
         serializer = EmployeeProfileSerializer(ep, many=False, context={"request":request})
         return Response(serializer.data)
@@ -169,6 +170,7 @@ class EmployeeProfiles(ViewSet):
         ep.job_type_id = request.data['job_type_id']
         ep.title = request.data["title"]
         ep.description = request.data['description']
+        ep.pay = request.data['pay']
         customer = Customer.objects.get(user=request.auth.user)
         ep.customer = customer
         ep.save()
