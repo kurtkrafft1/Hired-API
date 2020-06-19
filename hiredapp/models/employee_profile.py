@@ -10,6 +10,7 @@ class EmployeeProfile(models.Model):
     customer_id
     title
     description
+    pay
 
     '''
 
