@@ -21,6 +21,7 @@ class Customer(models.Model):
     phone_number = models.CharField(max_length=55)
     zipcode = models.CharField(max_length=10)
     city = models.CharField(max_length=55)
+    profile_picture = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return f'{self.user.first_name} {self.user.last_name}'

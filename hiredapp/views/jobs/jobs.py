@@ -31,7 +31,7 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
             view_name="customer",
             lookup_field = 'id'
         )
-        fields = ('id', 'user', 'address', 'phone_number', 'zipcode', 'city')
+        fields = ('id', 'user', 'address', 'phone_number', 'zipcode', 'city', 'profile_picture')
 
 class EmployeeProfileSerializer(serializers.HyperlinkedModelSerializer):
     customer = CustomerSerializer('customer')

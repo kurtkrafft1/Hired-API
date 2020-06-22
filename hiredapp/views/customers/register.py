@@ -33,7 +33,8 @@ def register_user(request):
             user=new_user,
             address=req_body['address'],
             phone_number=req_body['phone_number'],
-            zipcode = req_body['zipcode']
+            zipcode = req_body['zipcode'],
+            city = req_body['city']
         )
 
         # Commit the user to the database by saving it
