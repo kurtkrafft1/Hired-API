@@ -65,8 +65,8 @@ class EmployeeProfiles(ViewSet):
         search = self.request.query_params.get('search', None)
         if user_query is not None:
             #if so we grab the user and the find the customer based of that 
-            user = User.objects.get(pk=user_query)
-            customer = Customer.objects.get(user_id=user)
+            # user = User.objects.get(pk=user_query)
+            customer = Customer.objects.get(user = request.auth.user)
             #then we filter the profiles based off of that customer
             eps = eps.filter(customer = customer)
         

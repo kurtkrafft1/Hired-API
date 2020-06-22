@@ -64,13 +64,14 @@ class Jobs(ViewSet):
         user_query = self.request.query_params.get("user_id", None)
         if user_query is not None:
             #grab the user/associate it with customer/ associate it with that jobs so we can show all the jobs for a user
-            user = User.objects.get(pk=user_query)
-            customer = Customer.objects.get(user = user)
+            # user = User.objects.get(pk=user_query)
+            customer = Customer.objects.get(user = request.auth.user)
             jobs = jobs.filter(customer=customer)
         
         #Here we check if we are trying to get jobs by the user
         Twoser_query = self.request.query_params.get('by_user', None)
         if Twoser_query is not None:
+            customer = Customer.objects.get(user=request.auth.user)
             #we have to use a raw sqlite query because the customer id is nested within employeeprofile and inside that is the user id 
             # We will have access to the user_id through session storage
             #to make more secure we could use token authentication however my stages were incorrect when I set this page up so it wasn't working
@@ -88,7 +89,7 @@ class Jobs(ViewSet):
                 left join hiredapp_customer c on ep.customer_id = c.id
                 left join auth_user u on c.user_id = u.id 
                 where u.id = %s;
-            ''', [Twoser_query])
+            ''', [customer.user.id])
         
         employee_profile = self.request.query_params.get('employee_profile', None)
         if employee_profile is not None:
