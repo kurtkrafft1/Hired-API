@@ -21,7 +21,7 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
             view_name='customer',
             lookup_field = "id"
         )
-        fields = ('id', 'address', 'phone_number','city', 'zipcode','user_id', 'user')
+        fields = ('id', 'address', 'phone_number','city', 'zipcode','user_id', 'user', 'profile_picture')
         depth = 1
     
 class Customers(ViewSet):
@@ -55,6 +55,8 @@ class Customers(ViewSet):
         customer.address = request.data['address']
         customer.phone_number = request.data['phone_number']
         customer.city = request.data['city']
+        if request.FILES:
+            customer.profile_picture = request.FILES["profile_picture"]
         customer.save()
 
         serializer = CustomerSerializer(customer,context = {'request': request})
