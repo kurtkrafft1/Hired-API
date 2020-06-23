@@ -17,7 +17,7 @@ class Message(models.Model):
         # seen boolean
     '''
     customer = models.ForeignKey(Customer, on_delete=models.DO_NOTHING)
-    job = models.ForeignKey(Job, on_delete=models.DO_NOTHING)
+    job = models.ForeignKey(Job, on_delete=models.CASCADE)
     receiver_customer = models.ForeignKey(Customer, on_delete=models.DO_NOTHING, related_name='receivers')
     content = models.CharField(max_length=200)
     created_at = models.DateTimeField()
