@@ -21,7 +21,7 @@ class Message(models.Model):
     receiver_customer = models.ForeignKey(Customer, on_delete=models.DO_NOTHING, related_name='receivers')
     content = models.CharField(max_length=200)
     created_at = models.DateTimeField()
-    # seen = models.BooleanField() stretch goal
+    seen = models.BooleanField(default=True) 
 
     class Meta:
         ordering = (F('created_at').desc(nulls_last=True),)

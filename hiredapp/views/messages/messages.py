@@ -23,7 +23,7 @@ class MessagesSerializer(serializers.HyperlinkedModelSerializer):
             view_name="messages",
             lookup_field= "id"
         )
-        fields = ('id', 'customer', 'receiver_customer', 'content','created_at', 'job_id')
+        fields = ('id', 'customer', 'receiver_customer', 'content','created_at', 'job_id', 'seen')
 
 class Messages(ViewSet):
 
@@ -32,6 +32,8 @@ class Messages(ViewSet):
         #This first query param tells the api to get messages (associated with user) and only grab 1 message between the user and someone 
         #else no matter whether the user is the sender or receiver
         get_names = self.request.query_params.get('get_names', None)
+
+        get_new_messages = self.request.query_params.get('new_messages', None)
         #this will be used to fetch all the messages associated with one job
         by_job = self.request.query_params.get('by_job', None)
         if get_names is not None:
@@ -45,7 +47,8 @@ class Messages(ViewSet):
                     m.customer_id,
                     m.receiver_customer_id,
                     m.created_at,
-                    m.job_id
+                    m.job_id,
+                    m.seen
                     from hiredapp_message m 
                     where m.customer_id = %s or m.receiver_customer_id = %s
                     group by m.job_id;	        
@@ -59,7 +62,26 @@ class Messages(ViewSet):
 
             serializer = MessagesSerializer(messages, many=True, context={"request":request})
             return Response(serializer.data)
-    
+        if get_new_messages is not None:
+            customer= Customer.objects.get(user=request.auth.user)
+            cId = customer.id 
+            messages = Message.objects.raw('''
+                SELECT
+                    m.id,
+                    m.content,
+                    m.customer_id,
+                    m.receiver_customer_id,
+                    m.created_at,
+                    m.job_id,
+                    m.seen
+                    from hiredapp_message m 
+                    where m.receiver_customer_id = %s  and m.seen = 0
+            ''', [cId])
+
+            serializer = MessagesSerializer(messages, many=True, context={"request": request})
+            
+            return  Response(serializer.data)
+            
     def create(self,request):
         message = Message()
         customer = Customer.objects.get(user=request.auth.user)
@@ -69,7 +91,17 @@ class Messages(ViewSet):
         message.content = request.data['content']
         message.created_at = timezone.now()
         message.job_id = request.data['job_id']
+        message.seen = request.data['seen']
         message.save()
 
         serializer = MessagesSerializer(message, context={"request":request})
         return Response(serializer.data)
+
+    def update(self, request, pk=None): 
+        '''this is to update a message when it is viewed'''
+  
+        message = Message.objects.get(pk=pk)
+        message.seen = True
+        message.save()
+
+        return Response({}, status=status.HTTP_204_NO_CONTENT)
