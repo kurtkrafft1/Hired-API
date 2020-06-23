@@ -11,7 +11,7 @@ class Job(models.Model):
         customer id 
     
     '''
-    employee_profile = models.ForeignKey(EmployeeProfile, on_delete=models.DO_NOTHING)
+    employee_profile = models.ForeignKey(EmployeeProfile, on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer, on_delete=models.DO_NOTHING)
     start_date = models.DateTimeField(null=True, blank=True)
     end_date = models.DateTimeField(null=True, blank=True)
