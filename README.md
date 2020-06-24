@@ -33,8 +33,11 @@ This is the back-end counterpart to the full-stack [Hired React App](https://git
 1. find that connection file the path is this `hiredapp/views/connection.py`
 
 1. in that file enter the following code:
-         `class Connection:`
-         `      db_path= "your relative path here"`
+
+         
+        class Connection:
+            db_path = "Your db.sqlite3 path here"
+         
 
 1. make sure that the spacing is correct and that db_path is indented
 
@@ -43,9 +46,9 @@ This is the back-end counterpart to the full-stack [Hired React App](https://git
     `python manage.py makemigrations`
     `python manage.py migrate`
 
-1. Now that you have this set up go back to your text editor that you opened earlier and you should see a file called "db.sqlite3" right or cmd click that file and hit 'copy relative path' 
+1. Now that you have this set up go back to your text editor that you opened earlier and you should see a file called "db.sqlite3" right or cmd click that file and hit 'copy path' 
 
-1. navigate back to the connection.py file and past that path where it says "your relative path here" keeping the quotation marks
+1. navigate back to the connection.py file and past that path where it says "your DB path here" keeping the quotation marks
 
 
 1. in your terminal it is time to load fixtures:
