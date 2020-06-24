@@ -73,7 +73,7 @@ This is the back-end counterpart to the full-stack [Hired React App](https://git
 ## Made By:
 - [Kurt Krafft](https://github.com/kurtkrafft1)
 
-![ERD] (https://raw.githubusercontent.com/kurtkrafft1/Hired-API/master/images/erd.png)    
+![ERD] (https://github.com/kurtkrafft1/Hired-API/blob/master/images/erd.png?raw=true)    
 
 <!-- https://raw.githubusercontent.com/kurtkrafft1/Hired-API/master/images/erd.png -->
 
