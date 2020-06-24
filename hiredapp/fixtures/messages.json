@@ -586,5 +586,65 @@
         "created_at": "2020-06-24T14:45:53.588Z",
         "seen": true
     }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 131,
+    "fields": {
+        "customer": 3,
+        "job": 37,
+        "receiver_customer": 1,
+        "content": "Hey! I admire your work, and would like to hire you sometime. Thanks!",
+        "created_at": "2020-06-24T16:06:01.183Z",
+        "seen": false
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 132,
+    "fields": {
+        "customer": 1,
+        "job": 38,
+        "receiver_customer": 9,
+        "content": "Hey! I need some help managing my team of plumbers and musicians!",
+        "created_at": "2020-06-24T16:06:53.101Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 133,
+    "fields": {
+        "customer": 9,
+        "job": 38,
+        "receiver_customer": 1,
+        "content": "Yes I can help you!",
+        "created_at": "2020-06-24T16:07:22.454Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 134,
+    "fields": {
+        "customer": 1,
+        "job": 38,
+        "receiver_customer": 9,
+        "content": "perfect!",
+        "created_at": "2020-06-24T16:07:49.241Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 135,
+    "fields": {
+        "customer": 9,
+        "job": 38,
+        "receiver_customer": 1,
+        "content": "Thank you for your time and for hiring me. I hope to work for you again in the future! take care",
+        "created_at": "2020-06-24T16:08:12.589Z",
+        "seen": true
+    }
 }
 ]
