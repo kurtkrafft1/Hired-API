@@ -1,0 +1,156 @@
+[
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 1,
+    "fields": {
+        "job_type": 18,
+        "customer": 1,
+        "title": "Guitarist #1",
+        "description": "I've been playing guitar for over 200 years. One could even venture to say I am a guitar wizard! I have had experience playing with everyone. From Mozart to Jimi Hendrix. Let me teach your kids how to sell their souls to the rock n roll overlords.",
+        "pay": "$7.25/hour"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 2,
+    "fields": {
+        "job_type": 21,
+        "customer": 1,
+        "title": "Plumber #1",
+        "description": "Hello, I have been alive for over 250 years. I know sounds crazy right? Well, it stinks for me, but its great for you! I actually invented the toilet! So, if you need any sore of repair, you can look no further!",
+        "pay": "$40.00/hour"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 3,
+    "fields": {
+        "job_type": 15,
+        "customer": 2,
+        "title": "Trainer",
+        "description": "'sup I like to weight lift and be strong. I can help you do the same. Lets team up and I'll make you the buffest this side of the Mississippi.",
+        "pay": "$7.25/hour"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 4,
+    "fields": {
+        "job_type": 1,
+        "customer": 3,
+        "title": "Painter",
+        "description": "Bonjour, I graduated from --INSERT COLLEGE HERE-- in --YEAR-- where i got a degree in Art. I am looking for some freelance work! Feel free to message me for some samples of what I have done!",
+        "pay": "$83.90/session"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 5,
+    "fields": {
+        "job_type": 13,
+        "customer": 3,
+        "title": "Teacher",
+        "description": "Hi! I have been teaching for almost 10 years now and just can't get enough! I love kids and really enjoy seeing their growth over the years. Reach out if you think I could make a good tutor for your youngster.",
+        "pay": "$15.00/hour"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 38,
+    "fields": {
+        "job_type": 3,
+        "customer": 30,
+        "title": "Contractor",
+        "description": "I have been working as a contractor for 15 years. I have a wide range of clients and employees to ensure we can get the job done correctly and efficiently!",
+        "pay": "$300.00/session"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 39,
+    "fields": {
+        "job_type": 18,
+        "customer": 30,
+        "title": "Bassist",
+        "description": "Hello, I am a bass player and am new to the game. Looking for some fellow musicians to rock with!",
+        "pay": "$8.50/hour"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 41,
+    "fields": {
+        "job_type": 18,
+        "customer": 31,
+        "title": "Singer",
+        "description": "Hey everyone! I am a professional singer looking to make some money whilest suck in quarantine. I have a full studio in my house and can record anything from BGV's to lead vocals. Send me your tracks and I can show you what I got!\n",
+        "pay": "$130.00/session"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 42,
+    "fields": {
+        "job_type": 1,
+        "customer": 31,
+        "title": "Journalist",
+        "description": "Need a quick bio? or maybe some help writing that next big scoop! I am your girl. I have a masters degree in writing awesome stuff from Awesome University!",
+        "pay": "$50.00/hour"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 43,
+    "fields": {
+        "job_type": 6,
+        "customer": 5,
+        "title": "Business Consultant",
+        "description": "Good day, My name is Zane and business is my game. I use to roll with the tigers on wallstreet and now I am out on these streets trying to help YOU!",
+        "pay": "$200.00/hour"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 44,
+    "fields": {
+        "job_type": 18,
+        "customer": 5,
+        "title": "Flutist",
+        "description": "I can play a mean flute. Do you have a ploynesian Flute Rock band?? Well, look no further. I have been shredding the flute since I was a mere boy!",
+        "pay": "$122.00/session"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 45,
+    "fields": {
+        "job_type": 17,
+        "customer": 9,
+        "title": "Business Management",
+        "description": "Need help reforming your business team for maximum proficiency? I am the one who can do that. I graduated top of my class from Harvard and then proceeded to get a masters in Business Management from there as well. I also can speak 3 languages and can sell salt to a snail. Literally.",
+        "pay": "$230.00/session"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 46,
+    "fields": {
+        "job_type": 17,
+        "customer": 9,
+        "title": "Band Management",
+        "description": "I have represented every major act that has gone through the Bridgestone arena, and am looking for a new challenge. Please, reach out and send me your EPK's, worse band wins the prize of the century.",
+        "pay": "$2.00/hour"
+    }
+},
+{
+    "model": "hiredapp.employeeprofile",
+    "pk": 47,
+    "fields": {
+        "job_type": 23,
+        "customer": 32,
+        "title": "Full Stack Developer",
+        "description": "I studied diligently at NSS for 6 months and have created from scratch many applications. This being one. I have experience with CSS, HTML, JavaScript, React, Python, Django, and more. I really just love coding and learning, but mostly I enjoy working with teams to solve problems. If you think I would be a good fit for your team, feel free to reach out to me kurtkrafft3@gmail.com",
+        "pay": "$50.00/hour"
+    }
+}
+]

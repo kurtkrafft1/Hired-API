@@ -1,0 +1,47 @@
+[
+{
+    "model": "hiredapp.rating",
+    "pk": 21,
+    "fields": {
+        "number": 4,
+        "customer": 5,
+        "employee_profile": 5
+    }
+},
+{
+    "model": "hiredapp.rating",
+    "pk": 22,
+    "fields": {
+        "number": 5,
+        "customer": 31,
+        "employee_profile": 47
+    }
+},
+{
+    "model": "hiredapp.rating",
+    "pk": 23,
+    "fields": {
+        "number": 2,
+        "customer": 32,
+        "employee_profile": 4
+    }
+},
+{
+    "model": "hiredapp.rating",
+    "pk": 24,
+    "fields": {
+        "number": 5,
+        "customer": 1,
+        "employee_profile": 47
+    }
+},
+{
+    "model": "hiredapp.rating",
+    "pk": 25,
+    "fields": {
+        "number": 5,
+        "customer": 1,
+        "employee_profile": 41
+    }
+}
+]
