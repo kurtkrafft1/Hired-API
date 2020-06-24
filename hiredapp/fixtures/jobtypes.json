@@ -1,0 +1,163 @@
+[
+{
+    "model": "hiredapp.jobtype",
+    "pk": 1,
+    "fields": {
+        "title": "Arts"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 2,
+    "fields": {
+        "title": "Alchemy"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 3,
+    "fields": {
+        "title": "Architecture"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 4,
+    "fields": {
+        "title": "Business Consulting"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 5,
+    "fields": {
+        "title": "Business Analysis"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 6,
+    "fields": {
+        "title": "Business -General"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 7,
+    "fields": {
+        "title": "Cleaning"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 8,
+    "fields": {
+        "title": "Community Service"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 9,
+    "fields": {
+        "title": "Computer Science"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 10,
+    "fields": {
+        "title": "Computer Repair"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 11,
+    "fields": {
+        "title": "Construction"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 12,
+    "fields": {
+        "title": "Design"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 13,
+    "fields": {
+        "title": "Education"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 14,
+    "fields": {
+        "title": "Food and Drink Prep"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 15,
+    "fields": {
+        "title": "Health"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 16,
+    "fields": {
+        "title": "Legal"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 17,
+    "fields": {
+        "title": "Managemnt"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 18,
+    "fields": {
+        "title": "Music"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 19,
+    "fields": {
+        "title": "Maintenance"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 20,
+    "fields": {
+        "title": "Office Admin"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 21,
+    "fields": {
+        "title": "Plumbing"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 22,
+    "fields": {
+        "title": "Repair"
+    }
+},
+{
+    "model": "hiredapp.jobtype",
+    "pk": 23,
+    "fields": {
+        "title": "Website Development"
+    }
+}
+]

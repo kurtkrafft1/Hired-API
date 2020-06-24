@@ -1,0 +1,590 @@
+[
+{
+    "model": "hiredapp.message",
+    "pk": 81,
+    "fields": {
+        "customer": 5,
+        "job": 29,
+        "receiver_customer": 32,
+        "content": "Hey! I admire your work, and would like to hire you sometime. Thanks!",
+        "created_at": "2020-06-23T20:16:57.974Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 82,
+    "fields": {
+        "customer": 32,
+        "job": 29,
+        "receiver_customer": 5,
+        "content": "Hey Zane, Thanks for reaching out. What can I do for you?",
+        "created_at": "2020-06-23T20:17:15.686Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 83,
+    "fields": {
+        "customer": 5,
+        "job": 29,
+        "receiver_customer": 32,
+        "content": "Well, I need someone to build me a personal website for business and the casual fluting. Can you do it?",
+        "created_at": "2020-06-23T20:17:49.642Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 84,
+    "fields": {
+        "customer": 32,
+        "job": 29,
+        "receiver_customer": 5,
+        "content": "Yes. Give me 3 days and roughly $300 and I will complete this for you.",
+        "created_at": "2020-06-23T20:18:11.923Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 85,
+    "fields": {
+        "customer": 5,
+        "job": 29,
+        "receiver_customer": 32,
+        "content": "Great! You're Hired!",
+        "created_at": "2020-06-23T20:18:23.384Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 86,
+    "fields": {
+        "customer": 1,
+        "job": 30,
+        "receiver_customer": 31,
+        "content": "Hey! I admire your work, and would like to hire you sometime. Thanks!",
+        "created_at": "2020-06-23T20:19:08.691Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 87,
+    "fields": {
+        "customer": 31,
+        "job": 30,
+        "receiver_customer": 1,
+        "content": "Hey Jude! It is great to hear from you. I would be happy to sing on some tracks. Send them over some time and give me some notes on what you would like",
+        "created_at": "2020-06-23T20:19:52.865Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 88,
+    "fields": {
+        "customer": 1,
+        "job": 30,
+        "receiver_customer": 31,
+        "content": "Oh boy! That was easy. What's your email and Ill send them over",
+        "created_at": "2020-06-23T20:20:10.880Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 89,
+    "fields": {
+        "customer": 31,
+        "job": 30,
+        "receiver_customer": 1,
+        "content": "-sal@sal.com hope to hear from you soon",
+        "created_at": "2020-06-23T20:20:31.464Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 90,
+    "fields": {
+        "customer": 1,
+        "job": 31,
+        "receiver_customer": 9,
+        "content": "Hey! Would love to apply for the band management position",
+        "created_at": "2020-06-23T20:23:07.675Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 91,
+    "fields": {
+        "customer": 9,
+        "job": 31,
+        "receiver_customer": 1,
+        "content": "Perfect Jude! Sounds great, send me your EPK and I will get back to you. p@p.com is my email",
+        "created_at": "2020-06-23T20:23:45.007Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 92,
+    "fields": {
+        "customer": 1,
+        "job": 31,
+        "receiver_customer": 9,
+        "content": "Amazing, Thanks Pat!",
+        "created_at": "2020-06-23T20:24:02.914Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 93,
+    "fields": {
+        "customer": 1,
+        "job": 32,
+        "receiver_customer": 32,
+        "content": "Wow Kurt, great job on that Hired App! Really good work, I need a some help making a website for my own guitar company I am starting can I count you in?",
+        "created_at": "2020-06-23T20:26:57.294Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 94,
+    "fields": {
+        "customer": 32,
+        "job": 32,
+        "receiver_customer": 1,
+        "content": "Yes you can Jude! Thanks for the compliment, and because you're a fellow musician I am going to cut you deal. Only $30/hr",
+        "created_at": "2020-06-23T20:27:50.198Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 95,
+    "fields": {
+        "customer": 1,
+        "job": 32,
+        "receiver_customer": 32,
+        "content": "WOW, you are such a cool dude Kurt, Thanks! ",
+        "created_at": "2020-06-23T20:28:07.191Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 96,
+    "fields": {
+        "customer": 32,
+        "job": 32,
+        "receiver_customer": 1,
+        "content": "Okay, Jude I am done! Here is your website, let me know what you think! www.awesomewebsite.com ",
+        "created_at": "2020-06-23T20:29:18.215Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 97,
+    "fields": {
+        "customer": 1,
+        "job": 32,
+        "receiver_customer": 32,
+        "content": "That looks very swell my friend, thank you for everything you've done!",
+        "created_at": "2020-06-23T20:29:46.993Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 98,
+    "fields": {
+        "customer": 1,
+        "job": 30,
+        "receiver_customer": 31,
+        "content": "Thanks for your help Sal!",
+        "created_at": "2020-06-24T14:20:14.507Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 99,
+    "fields": {
+        "customer": 5,
+        "job": 33,
+        "receiver_customer": 3,
+        "content": "Hey! I am looking for a tutor for my kids and your rate seems acceptable. What credentials do you have?",
+        "created_at": "2020-06-24T14:22:26.129Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 100,
+    "fields": {
+        "customer": 3,
+        "job": 33,
+        "receiver_customer": 5,
+        "content": "Thank you Zane! Yes I have been working as a teacher fro 20 years and graduated from Santa Clarka CA. with a degree in education!",
+        "created_at": "2020-06-24T14:23:25.087Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 101,
+    "fields": {
+        "customer": 5,
+        "job": 33,
+        "receiver_customer": 3,
+        "content": "Hm. Sounds satisfactory. You have a deal. $15.00 for the first few months and we will see how it fgoes",
+        "created_at": "2020-06-24T14:23:58.556Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 102,
+    "fields": {
+        "customer": 3,
+        "job": 33,
+        "receiver_customer": 5,
+        "content": "Much appreciated!",
+        "created_at": "2020-06-24T14:24:16.635Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 103,
+    "fields": {
+        "customer": 5,
+        "job": 33,
+        "receiver_customer": 3,
+        "content": "Wow my kids aced their exam! thanks Harvy!",
+        "created_at": "2020-06-24T14:27:13.719Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 104,
+    "fields": {
+        "customer": 9,
+        "job": 34,
+        "receiver_customer": 31,
+        "content": "Hey Sally, I think we can make some magic happen. I like your track record and want to hire you to sing on some of my artists new hits!",
+        "created_at": "2020-06-24T14:28:49.727Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 105,
+    "fields": {
+        "customer": 31,
+        "job": 34,
+        "receiver_customer": 9,
+        "content": "Wow, thanks Pat I am flattered. I should let you know times are tough right now due to coronavirus, and I may need a little extra $$ ",
+        "created_at": "2020-06-24T14:29:38.331Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 106,
+    "fields": {
+        "customer": 9,
+        "job": 34,
+        "receiver_customer": 31,
+        "content": "Price isn't an issue! I need your voice!",
+        "created_at": "2020-06-24T14:29:59.848Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 107,
+    "fields": {
+        "customer": 31,
+        "job": 34,
+        "receiver_customer": 9,
+        "content": "Amazing, Thanks Pat! Can't wait to hear the first track my email is sal@sal.com",
+        "created_at": "2020-06-24T14:30:26.134Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 108,
+    "fields": {
+        "customer": 9,
+        "job": 34,
+        "receiver_customer": 31,
+        "content": "Perfect. You're Hired (you see what I did there?)",
+        "created_at": "2020-06-24T14:30:49.195Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 109,
+    "fields": {
+        "customer": 31,
+        "job": 35,
+        "receiver_customer": 32,
+        "content": "Hey Kurt, it seems that my work as a singer is really starting to take off. I really need a website to show my stuff could you help?",
+        "created_at": "2020-06-24T14:33:32.898Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 110,
+    "fields": {
+        "customer": 32,
+        "job": 35,
+        "receiver_customer": 31,
+        "content": "Yes! Totally! I would love to help you. Unfortunately, it will be about a week before I can get to it. Is that okay?",
+        "created_at": "2020-06-24T14:34:05.620Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 111,
+    "fields": {
+        "customer": 31,
+        "job": 35,
+        "receiver_customer": 32,
+        "content": "That is totally fine!",
+        "created_at": "2020-06-24T14:34:15.536Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 112,
+    "fields": {
+        "customer": 32,
+        "job": 35,
+        "receiver_customer": 31,
+        "content": "Actually, my client for this week cancelled and delayed it until next month so I am free now! ",
+        "created_at": "2020-06-24T14:34:41.019Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 113,
+    "fields": {
+        "customer": 31,
+        "job": 35,
+        "receiver_customer": 32,
+        "content": "Wow that works out perfectly!",
+        "created_at": "2020-06-24T14:34:50.775Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 114,
+    "fields": {
+        "customer": 32,
+        "job": 35,
+        "receiver_customer": 31,
+        "content": "Oh yeah! I know times are tough and I try to help out my fellow musicians so I will only charge you $35.00/hr for your site! ",
+        "created_at": "2020-06-24T14:35:26.467Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 115,
+    "fields": {
+        "customer": 31,
+        "job": 35,
+        "receiver_customer": 32,
+        "content": "Wow what a deal! Thanks Kurt!",
+        "created_at": "2020-06-24T14:35:35.097Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 116,
+    "fields": {
+        "customer": 32,
+        "job": 35,
+        "receiver_customer": 31,
+        "content": "Excited to begin! Just send any photos, videos, and other content to my email K@k.com (not my real email). ",
+        "created_at": "2020-06-24T14:36:16.367Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 117,
+    "fields": {
+        "customer": 31,
+        "job": 35,
+        "receiver_customer": 32,
+        "content": "Perfect! I just sent it over!",
+        "created_at": "2020-06-24T14:36:29.219Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 118,
+    "fields": {
+        "customer": 32,
+        "job": 35,
+        "receiver_customer": 31,
+        "content": "(One Week Later)-----All done Sally! Thanks for sending over all the merch images on such short notice. Here is your website! www.SuperRadSiteForYou.com",
+        "created_at": "2020-06-24T14:37:27.766Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 119,
+    "fields": {
+        "customer": 31,
+        "job": 35,
+        "receiver_customer": 32,
+        "content": "Wow! SO great. you really out did yourself! Get ready for a great review!",
+        "created_at": "2020-06-24T14:38:59.165Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 121,
+    "fields": {
+        "customer": 32,
+        "job": 35,
+        "receiver_customer": 31,
+        "content": "Thanks Sal! Take care!",
+        "created_at": "2020-06-24T14:40:56.262Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 122,
+    "fields": {
+        "customer": 32,
+        "job": 36,
+        "receiver_customer": 3,
+        "content": "Hey! I admire your work, and would like to hire you sometime. Thanks!",
+        "created_at": "2020-06-24T14:42:51.777Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 123,
+    "fields": {
+        "customer": 3,
+        "job": 36,
+        "receiver_customer": 32,
+        "content": "Hey Kurt thanks for reaching out. I am free this weekend, what can I help you with?",
+        "created_at": "2020-06-24T14:43:23.133Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 124,
+    "fields": {
+        "customer": 32,
+        "job": 36,
+        "receiver_customer": 3,
+        "content": "I need someone to paint this room I am moving into. I am looking for a nice blue with a subtly gradient into maybe a dark blue/purple",
+        "created_at": "2020-06-24T14:43:53.339Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 125,
+    "fields": {
+        "customer": 3,
+        "job": 36,
+        "receiver_customer": 32,
+        "content": "Hmm. I think I can pull that off. Kind of like the linear gradient for the background color of this website?",
+        "created_at": "2020-06-24T14:44:16.825Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 126,
+    "fields": {
+        "customer": 32,
+        "job": 36,
+        "receiver_customer": 3,
+        "content": "Yes! Just like that!",
+        "created_at": "2020-06-24T14:44:26.131Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 127,
+    "fields": {
+        "customer": 3,
+        "job": 36,
+        "receiver_customer": 32,
+        "content": "Easy! I will be there at 8am this saturday!",
+        "created_at": "2020-06-24T14:44:43.081Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 128,
+    "fields": {
+        "customer": 32,
+        "job": 36,
+        "receiver_customer": 3,
+        "content": "Perfect!",
+        "created_at": "2020-06-24T14:44:50.401Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 129,
+    "fields": {
+        "customer": 3,
+        "job": 36,
+        "receiver_customer": 32,
+        "content": "(--Sunday Morning--) Awesome. Sorry again for accidentally painting your cat. I am sure he will be fine.",
+        "created_at": "2020-06-24T14:45:36.541Z",
+        "seen": true
+    }
+},
+{
+    "model": "hiredapp.message",
+    "pk": 130,
+    "fields": {
+        "customer": 32,
+        "job": 36,
+        "receiver_customer": 3,
+        "content": "Yeah. SHE will. Thanks Harvy.",
+        "created_at": "2020-06-24T14:45:53.588Z",
+        "seen": true
+    }
+}
+]
