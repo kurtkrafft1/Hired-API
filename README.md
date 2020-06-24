@@ -34,10 +34,10 @@ This is the back-end counterpart to the full-stack [Hired React App](https://git
 
 1. in that file enter the following code:
 
-         "
+         
         class Connection:
             db_path = "Your db.sqlite3 path here"
-         "
+         
 
 1. make sure that the spacing is correct and that db_path is indented
 
